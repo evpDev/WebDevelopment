@@ -1,18 +1,22 @@
 .wrapper {
-    outline: 1px solid #0c0;
-    height: 500px;
-    width: 500px;
+    /*outline: 1px solid #0c0;*/
+    /*height: 900px;*/
+    width: 900px;
     margin: 0 auto;
 }
 
 .blockView {
     outline: 1px solid #c00;
-    width: 240px;
-    height: 240px;
+    width: 440px;
+    height: 440px;
     float: left;
     margin: 0 20px 20px 0;
 }
 
 .blockView:nth-child(2n) {
     margin: 0;
+}
+
+.blockView:nth-child(3) {
+    margin-bottom: 0;
 }
