@@ -4,3 +4,15 @@
     width: 500px;
     margin: 0 auto;
 }
+
+.blockView {
+    outline: 1px solid #c00;
+    width: 240px;
+    height: 240px;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.blockView:nth-child(2n) {
+    margin: 0;
+}
