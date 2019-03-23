@@ -61,9 +61,48 @@
     margin-bottom: 50px;
 }
 
+.col-md-6 {
+    /*background-color: red;*/
+    min-height: 50px;
+}
+
+.contactsBlock {
+    background-color: #f5f5f5;
+    margin-top: 40px;
+    padding-top: 20px;
+}
+
+.contactsBlock .row {
+    min-height: 50px;
+}
+
+.contactsBlock form {
+    margin-top: 20px;
+}
+
+.contactsBlock textarea {
+    /*min-width: 310px;*/
+    /*max-width: 310px;*/
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 991px) {
+    .twoWordsBlock .text {
+        margin-top: -40px;
+        margin-bottom: 20px;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .mainBlock .header, .fullInfoServiceBlock .header {
         font-size: 40px;
+    }
+
+    .contactsBlock .headInfo {
+        font-size: 20px;
     }
 
     .mainBlock .subtext, .fullInfoServiceBlock .subtext {
@@ -76,18 +115,6 @@
 
     .twoWordsBlock .subtext {
         font-size: 16px;
-    }
-}
-
-.col-md-6 {
-    /*background-color: red;*/
-    min-height: 50px;
-}
-
-@media screen and (max-width: 991px) {
-    .twoWordsBlock .text {
-        margin-top: -40px;
-        margin-bottom: 20px;
     }
 }
 
