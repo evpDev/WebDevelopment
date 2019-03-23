@@ -47,6 +47,10 @@
     padding-right: 0;
 }
 
+.col-sm-4 {
+    margin-bottom: 50px;
+}
+
 @media screen and (max-width: 500px) {
     .mainBlock .header {
         font-size: 40px;
