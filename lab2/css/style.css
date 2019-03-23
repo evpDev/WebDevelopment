@@ -1,6 +1,7 @@
 .container-fluid .row {
     /*outline: 1px solid #00c;*/
     min-height: 100px;
+    margin-right: 0;
 }
 
 .container-fluid .mainBlock {
@@ -33,6 +34,14 @@
     padding: 0 10px;
 }
 
+.twoWordsBlock .header, .twoWordsBlock .subtext, .twoWordsBlock .imgs .row {
+    padding: 0 10px;
+}
+
+.twoWordsBlock .text {
+    margin-top: 100px;
+}
+
 .p-y-0 {
     padding-left: 0;
     padding-right: 0;
@@ -46,6 +55,26 @@
     .mainBlock .subtext {
         font-size: 16px;
     }
+
+    .twoWordsBlock .header {
+        font-size: 24px;
+    }
+
+    .twoWordsBlock .subtext {
+        font-size: 16px;
+    }
+}
+
+.col-md-6 {
+    /*background-color: red;*/
+    min-height: 50px;
+}
+
+@media screen and (max-width: 991px) {
+    .twoWordsBlock .text {
+        margin-top: -40px;
+        margin-bottom: 20px;
+    }
 }
 
 @media screen and (max-width: 350px) {
@@ -55,5 +84,24 @@
 
     .mainBlock .subtext {
         font-size: 12px;
+    }
+
+    .twoWordsBlock .header {
+        font-size: 20px;
+    }
+
+    .twoWordsBlock .subtext {
+        font-size: 12px;
+    }
+
+    .twoWordsBlock .text {
+        margin-top: -80px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 1340px) {
+    .container-fluid .mainBlock {
+        background-size: 100%;
     }
 }
