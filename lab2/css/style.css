@@ -7,16 +7,26 @@
 .container-fluid .mainBlock {
     outline: 1px solid #0c0;
     background-image: url("../Row16.jpg");
-    background-color: rgba(0, 0, 0, .5);
+    /*background-color: rgba(0, 0, 0, .5);*/
     /*background-size: 100%;
     background-repeat: no-repeat;*/
 }
 
-.container-fluid .mainBlock .musk {
+/*.container-fluid .mainBlock .musk, .container-fluid .fullInfoServiceBlock .musk {
+    background: rgba(0,0,0,0.5);
+}*/
+
+.musk {
     background: rgba(0,0,0,0.5);
 }
 
-.mainBlock .text-center {
+.container-fluid .fullInfoServiceBlock {
+    background-image: url("../coridor.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.mainBlock .text-center, .fullInfoServiceBlock .text-center {
     color: white;
 }
 
@@ -52,11 +62,11 @@
 }
 
 @media screen and (max-width: 500px) {
-    .mainBlock .header {
+    .mainBlock .header, .fullInfoServiceBlock .header {
         font-size: 40px;
     }
 
-    .mainBlock .subtext {
+    .mainBlock .subtext, .fullInfoServiceBlock .subtext {
         font-size: 16px;
     }
 
@@ -82,11 +92,11 @@
 }
 
 @media screen and (max-width: 350px) {
-    .mainBlock .header {
+    .mainBlock .header, .fullInfoServiceBlock .header {
         font-size: 30px;
     }
 
-    .mainBlock .subtext {
+    .mainBlock .subtext, .fullInfoServiceBlock .subtext {
         font-size: 12px;
     }
 
