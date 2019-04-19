@@ -24,7 +24,6 @@
              
             $result = mysqli_query($conn, $query) or die("Ошибка " . mysqli_error($conn)); 
             if ($result) {
-                $len = mysqli_num_rows($result);
                 $i = 0;
                 printStartArticles();
                 while ($row = mysqli_fetch_assoc($result)) {

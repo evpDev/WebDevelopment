@@ -1,3 +1,5 @@
+<?php include_once "connection.php";?>
+<?php include_once "snippets.php";?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -16,32 +18,27 @@
         <div class="row">
             <?php include ("menuAdmin.php");?>
         </div>
-        <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-4">
-                <div class="thumbnail">
-                    <img src="images/500x300.png" alt="">
-                    <div class="caption">
-                        <h4>Thumbnail label</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-                        <a href="#" class="btn btn-info btn-md" role="button">Подробнее</a>
-                        <a href="#" class="btn btn-danger btn-md" role="button">Удалить статью</a>
-                    </div>
-                </div> 
-            </div>
-            <div class="col-sm-4">
-                <div class="thumbnail">
-                    <img src="images/500x300.png" alt="">
-                    <div class="caption">
-                        <h4>Thumbnail label</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-                        <a href="#" class="btn btn-info btn-md" role="button">Подробнее</a>
-                        <a href="#" class="btn btn-danger btn-md" role="button">Удалить статью</a>
-                    </div>
-                </div> 
-            </div>
-            <div class="col-sm-2"></div>
-        </div>
+        <?php
+            $conn = mysqli_connect($host, $user, $password, $db) or die("Ошибка " . mysqli_error($conn)); 
+            $query = "SELECT * FROM article";
+             
+            $result = mysqli_query($conn, $query) or die("Ошибка " . mysqli_error($conn)); 
+            if ($result) {
+                $i = 0;
+                printStartArticles();
+                while ($row = mysqli_fetch_assoc($result)) {
+                    printAdminArticle($row['id'], $row['title'], $row['body']);
+                    if (($i % 2) == 1) {
+                        printDeviderForPair();
+                    }
+                    $i++;
+                }
+                printEndArticles();
+                mysqli_free_result($result);
+            }
+             
+            mysqli_close($conn);
+        ?>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
