@@ -1,5 +1,6 @@
 <?php include_once "connection.php";?>
-<?php include_once "snippets.php";?>
+<?php include_once "snippets.php";
+$page = "admin";?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>

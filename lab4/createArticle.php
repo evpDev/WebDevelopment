@@ -1,5 +1,13 @@
 <?php
-
+$page = "createArticle";
+include_once "connection.php";
+if (isset($_POST['title']) && isset($_POST['body'])) {
+    $conn = mysqli_connect($host, $user, $password, $db) or die("Ошибка " . mysqli_error($conn));
+    $query = "INSERT INTO article (title, body) VALUES ('".$_POST['title']."', '".$_POST['body']."')";
+    $result = mysqli_query($conn, $query) or die("Ошибка " . mysqli_error($conn));
+    header('Location: ../admin.php');
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="ru">

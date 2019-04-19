@@ -13,8 +13,8 @@
                 <div id="navbarCollapse" class="collapse navbar-collapse">
                   <ul class="nav navbar-nav">
                     <li><a href="/">Главная</a></li>
-                    <li><a href="/createArticle.php">Создать статью</a></li>
-                    <li class="active"><a href="/admin.php">Редактировать статьи</a></li>
+                    <li <? if ($page == "createArticle") echo 'class="active"' ?>><a href="/createArticle.php">Создать статью</a></li>
+                    <li <? if ($page == "admin") echo 'class="active"' ?>><a href="/admin.php">Редактировать статьи</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                   <li><a href="#">Войти</a></li>
