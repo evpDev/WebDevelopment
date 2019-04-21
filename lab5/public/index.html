@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Редактор markdown</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" /> -->
+    <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script> -->
+</head>
+<body>
+    <div class="wrapper">
+        <div id="draftsList">
+            <ol>
+                <a href="#" v-on:click="placeTitle" v-for="draft in drafts">
+                    <li>{{ draft.title }}</li>
+                    <input type="hidden" name="_id" v-bind:value="draft._id">
+                </a>
+            </ol>
+            <input type="button" name="title" value="add draft" v-on:click="addDraft">
+        </div>
+        <div id="navigation">
+            <input type="text" name="title" v-model="title">
+            <input type="button" name="save" value="save" v-on:click="saveDraft">
+            <input type="button" name="delete" value="delete" v-on:click="delDraft">
+        </div>
+        <div id="enterDraft">
+            <textarea v-model="text" v-on:input="smChanged"></textarea><!-- v-on:input="smChanged"  -->
+        </div>
+        <div id="showMarkdown" v-html="markdowned"></div>
+        <div style="clear: left;"></div>
+    </div>
+    <!-- <form name="userForm">
+        <input type="hidden" name="id" value="0" />
+        <div class="form-group">
+            <label for="name">Имя:</label>
+            <input class="form-control" name="name" />
+        </div>
+        <div class="form-group">
+            <label for="age">Возраст:</label>
+            <input class="form-control" name="age" />
+        </div>
+        <div class="panel-body">
+            <button type="submit" class="btn btn-sm btn-primary">Сохранить</button>
+            <a id="reset" class="btn btn-sm btn-primary">Сбросить</a>
+        </div>
+    </form> -->
+    <!-- <script src="https://unpkg.com/vue"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown.js/0.5.0/markdown.min.js"></script>
+    <script src="vue.js"></script>
+    <script src="axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="myvue.js"></script>
+</body>
+</html>

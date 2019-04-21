@@ -1,0 +1,40 @@
+#draftsList {
+    width: 200px;
+    height: 500px;
+    outline: 1px solid #0c0;
+    float: left;
+}
+
+#navigation {
+    width: 900px;
+    height: 22px;
+    outline: 1px solid #c00;
+    float: left;
+}
+
+#enterDraft {
+    width: 450px;
+    height: 478px;
+    outline: 1px solid #00c;
+    float: left;
+}
+
+#enterDraft textarea {
+    height: 468px;
+    width: 430px;
+    padding: 5px 10px;
+    resize: none;
+}
+
+#showMarkdown {
+    width: 430px;
+    height: 468px;
+    outline: 1px solid #0cc;
+    float: left;
+    padding: 5px 10px;
+    overflow-y: scroll;
+}
+
+.wrapper {
+    width: 1100px;
+}
